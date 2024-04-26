@@ -1,0 +1,75 @@
+/* ======== GOOGLE FONTS ======== */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+/* ======== RESET ======== */
+body {
+    color: #ffffff;
+    font-family: 'DM Sans', sans-serif;
+    background-color: #030712;
+}
+
+label,
+input {
+    display: block;
+}
+
+/* ======== CHATPAGE ======== */
+.sidebar,
+.chat {
+    position: absolute;
+    height: 100%;
+    top: 0;
+}
+
+.sidebar {
+    left: 0;
+    width: 100%;
+}
+
+@media (min-width: 640px) {
+    .sidebar {
+        left: 0;
+        width: 344px;
+    }
+}
+
+.chat {
+    left: 0;
+    width: 100%;
+}
+
+@media (min-width: 640px) {
+    .chat {
+        left: 344px;
+        width: calc(100% - 344px);
+    }
+}
+
+.active::before {
+    display: none;
+    position: absolute;
+    content: '';
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 40px;
+    background-color: #3b82f6;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+@media (min-width: 640px) {
+    .active::before {
+        display: block;
+    }
+}
+
+.chat--ingoing::before,
+.chat--outgoing::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    bottom: -8px;
+}
